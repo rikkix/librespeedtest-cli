@@ -1,4 +1,4 @@
-module github.com/librespeed/speedtest-cli
+module go.rikki.moe/librespeedtest-cli
 
 go 1.18
 

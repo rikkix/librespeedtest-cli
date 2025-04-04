@@ -20,8 +20,8 @@ import (
 	log "github.com/sirupsen/logrus"
 	"github.com/urfave/cli/v2"
 
-	"github.com/librespeed/speedtest-cli/defs"
-	"github.com/librespeed/speedtest-cli/report"
+	"go.rikki.moe/librespeedtest-cli/defs"
+	"go.rikki.moe/librespeedtest-cli/report"
 )
 
 const (
@@ -73,6 +73,11 @@ func SpeedTest(c *cli.Context) error {
 		log.Warn("librespeed-cli\tCopyright (C) 2020 Maddie Zhan")
 		log.Warn("librespeed.org\tCopyright (C)")
 		return nil
+	}
+
+	if c.String(defs.OptionUserAgent) != "" {
+		defs.UserAgent = c.String(defs.OptionUserAgent)
+		log.Debugf("Using user agent: %s", defs.UserAgent)
 	}
 
 	if c.String(defs.OptionSource) != "" && c.String(defs.OptionInterface) != "" {

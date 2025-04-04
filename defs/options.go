@@ -42,4 +42,5 @@ const (
 	OptionTelemetryPath   = "telemetry-path"
 	OptionTelemetryShare  = "telemetry-share"
 	OptionTelemetryExtra  = "telemetry-extra"
+	OptionUserAgent       = "user-agent"
 )

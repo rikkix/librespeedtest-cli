@@ -15,10 +15,10 @@ import (
 
 	"github.com/briandowns/spinner"
 	"github.com/gocarina/gocsv"
-	"github.com/librespeed/speedtest-cli/defs"
-	"github.com/librespeed/speedtest-cli/report"
 	log "github.com/sirupsen/logrus"
-"github.com/urfave/cli/v2"
+	"github.com/urfave/cli/v2"
+	"go.rikki.moe/librespeedtest-cli/defs"
+	"go.rikki.moe/librespeedtest-cli/report"
 )
 
 const (

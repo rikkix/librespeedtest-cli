@@ -6,8 +6,8 @@ import (
 	log "github.com/sirupsen/logrus"
 	"github.com/urfave/cli/v2"
 
-	"github.com/librespeed/speedtest-cli/defs"
-	"github.com/librespeed/speedtest-cli/speedtest"
+	"go.rikki.moe/librespeedtest-cli/defs"
+	"go.rikki.moe/librespeedtest-cli/speedtest"
 )
 
 // init sets up the essential bits on start up
@@ -217,6 +217,11 @@ func main() {
 				Name: defs.OptionTelemetryExtra,
 				Usage: "Send a custom message along with the telemetry results.\n" +
 					"\tImplies --" + defs.OptionShare,
+			},
+			&cli.StringFlag{
+				Name: defs.OptionUserAgent,
+				Usage: "Set the user agent string to use when communicating\n" +
+					"\twith the server.",
 			},
 		},
 	}
